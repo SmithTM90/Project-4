@@ -5,11 +5,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <base href="/">
-  <title>MEAN Boilerplate</title>
+  <title>Band Finder</title>
 
   <!-- CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  <link rel="stylesheet" href="stylesheets/main.css">
+  <link rel="stylesheet" href="public/stylesheets/main.css">
 
   <!-- JS Dependencies -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
@@ -18,19 +18,20 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js"></script>
 
   <!-- Main App Entry -->
-  <script src="app/app.js"></script>
-
-  <!-- Controllers -->
-  <script src="app/controllers/my-controllers.js"></script>
-  <script src="app/controllers/home-controller.js"></script>
-
-  <!-- Factories -->
-  <script src="app/factories/my-factories.js"></script>
-
-  <!-- Services -->
-  <script src="app/services/my-services.js"></script>
+  <script src="public/app/app.js"></script>
 </head>
-<body ng-app="myApp">
+<body ng-app="bandFinder">
   <div ui-view></div>
+
+  <div ng-controller="finder">
+   <form class="form-inline" ng-submit="search(box)">
+      <div class="form-group">
+        <label for="search">Search</label>
+        <input type="text" placeholder="Search for Bands" id="search" name="box" ng-model="box" class="form-control">
+      </div>
+      <button type="submit" class="btn btn-success">Search</button>
+    </form>
+  </div>
+
 </body>
 </html>
