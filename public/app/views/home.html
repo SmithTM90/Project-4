@@ -1,1 +1,32 @@
-<h1>Home Page <small>{{name}}</small></h1>
+<h1>SongsForLater</h1>
+
+<button class="btn btn-primary" ui-sref="login">Login</button>
+<button class="btn btn-primary" ui-sref="signup">Signup</button>
+
+<div ng-controller="finder">
+   <form class="form-inline" ng-submit="search(box)">
+      <div class="form-group">
+        <label for="search">Search</label>
+        <input type="text" placeholder="Find songs for later!" id="search" name="box" ng-model="box" class="form-control">
+      </div>
+      <button type="submit" class="btn btn-success">Search</button>
+    </form>
+    <div class="well" ng-repeat="result in results track by $index">
+      {{result.Name}} ---
+      {{result.wTeaser}} --- <a href="{{result.wUrl}}">Learn more about {{result.Name}}</a>
+
+      <div class="well" ng-repeat="song in result.itunesSongs track by $index">
+        Track: {{song.trackName}}
+        <br>
+        <!-- <video preload="auto" width="300px" height="250px" src="https://www.youtube.com/watch?v=lTTajzrSkCw
+" controls>
+        </video> -->
+        <!-- <br> -->
+        <audio ng-src="{{convertSongUrl(song.previewUrl)}}" controls></audio>
+        <img src="{{song.artworkUrl100}}">
+        <a href="{{song.artistViewUrl}}">iTunes</a>
+        <a href="https://play.google.com/store/search?q={{song.artistName}}&c=music">Google Play Music</a>
+      </div>
+    </div>
+
+  </div>
