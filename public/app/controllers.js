@@ -26,7 +26,7 @@ angular.module('SongsCtrl', ['songServices'])
       console.log('Token:', res.data.token)
       $location.path('/');
     }, function error(res) {
-      console.log(data);
+      console.log(res);
     })
   };
 }]);

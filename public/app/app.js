@@ -39,8 +39,8 @@ bandFinder.controller('finder', ['$scope', '$http', '$sce', function($scope,$htt
         q: $scope.term,
         type: 'music',
         info: 1,
-        limit: 2,
-        k:'235626-Project4-CE4XY65G'
+        limit: 15,
+        k:'235626-Project4-HB2YAWWP'
       }
     })
     .then(function success(response) {
@@ -50,7 +50,7 @@ bandFinder.controller('finder', ['$scope', '$http', '$sce', function($scope,$htt
         itunesSearch(result.Name, index);
       });
     }, function error(response) {
-      console.log('tasteKid error');
+      console.log(response);
     })
   }
 

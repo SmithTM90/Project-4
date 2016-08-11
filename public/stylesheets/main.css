@@ -1,0 +1,32 @@
+body {
+  text-align: center;
+  background-color: #2C2233;
+  color: white;
+  padding-top: 10%;
+}
+
+h1 {
+  font-size: 75px;
+  font-family: 'Bungee Shade', cursive;
+  color: #8DB500;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.btn-success {
+  background-color: #8DB500;
+}
+
+.lines {
+  background-color: #005869;
+  height: 3px;
+  width: 100%;
+}
+
+.searchBox {
+  padding-bottom: 8%;
+}
+
+.main-input {
+  padding-bottom: 10px;
+}
