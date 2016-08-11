@@ -1,7 +1,6 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var path = require('path');
-var cors = require('cors'),express = require('express');
 
 // JSON web token dependencies, including a secret key to sign the token
 var expressJWT = require('express-jwt');
@@ -16,7 +15,6 @@ mongoose.connect('mongodb://localhost/songsforlater');
 
 var PORT = process.env.PORT || 3000;
 
-app.use(cors()); // **core as middleware**
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static(__dirname + '/public'));
