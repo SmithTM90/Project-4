@@ -34,7 +34,7 @@ bandFinder.controller('finder', ['$scope', '$http', '$sce', function($scope,$htt
   }
 
   function tasteKid() {
-    $http.get('https://tastekid.com/api/similar?', {
+    $http.get('http://tastekid.com/api/similar?', {
       params: {
         q: $scope.term,
         type: 'music',

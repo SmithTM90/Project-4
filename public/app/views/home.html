@@ -10,11 +10,11 @@
     </form>
     <button class="btn btn-success" ui-sref="login">Login</button>
     <button class="btn btn-success" ui-sref="signup">Signup</button>
-    <div class="well" ng-repeat="result in results track by $index">
+    <div class="well info" ng-repeat="result in results track by $index">
       {{result.Name}} ---
       {{result.wTeaser}} --- <a href="{{result.wUrl}}">Learn more about {{result.Name}}</a>
 
-      <div class="well info" ng-repeat="song in result.itunesSongs track by $index">
+      <div class="well song" ng-repeat="song in result.itunesSongs track by $index">
         Track: {{song.trackName}}
         <br>
         <!-- <video preload="auto" width="300px" height="250px" src="https://www.youtube.com/watch?v=lTTajzrSkCw
