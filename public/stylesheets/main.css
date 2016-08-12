@@ -30,3 +30,9 @@ h1 {
 .main-input {
   padding-bottom: 10px;
 }
+
+.info {
+  background-color: #2C2233;
+  color: white;
+  
+}

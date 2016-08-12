@@ -14,7 +14,7 @@
       {{result.Name}} ---
       {{result.wTeaser}} --- <a href="{{result.wUrl}}">Learn more about {{result.Name}}</a>
 
-      <div class="well" ng-repeat="song in result.itunesSongs track by $index">
+      <div class="well info" ng-repeat="song in result.itunesSongs track by $index">
         Track: {{song.trackName}}
         <br>
         <!-- <video preload="auto" width="300px" height="250px" src="https://www.youtube.com/watch?v=lTTajzrSkCw
