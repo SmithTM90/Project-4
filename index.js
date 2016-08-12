@@ -42,7 +42,7 @@ app.post('/api/auth', function(req, res) {
       // sign the JWT with the user payload and secret, then return
       var token = jwt.sign(user.toJSON(), secret);
 
-      return res.send({ user: user, token: token });
+      return res.json({ user: user, token: token });
     });
   });
 });

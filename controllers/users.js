@@ -7,7 +7,7 @@ router.route('/')
     User.find(function(err, users) {
       if (err) return res.status(500).send(err);
 
-      return res.send(users);
+      return res.json(users);
     });
   })
   .post(function(req,res) {
@@ -17,7 +17,7 @@ router.route('/')
       User.create(req.body, function(err, user) {
         if (err) return res.status(500).send(err);
 
-        return res.send(user);
+        return res.json(user);
       });
     });
 });
@@ -26,7 +26,7 @@ router.get('/:id', function(req, res) {
   User.findById(req.params.id, function(err, user) {
     if (err) return res.status(500).send(err);
 
-    return res.send(user);
+    return res.json(user);
   });
 });
 
