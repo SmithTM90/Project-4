@@ -11,7 +11,7 @@ var app = express();
 // Mongoose models and connection
 var mongoose = require('mongoose');
 var User = require('./models/usersModel');  
-mongoose.connect('mongodb://localhost/songsforlater');
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/mydbname');
 
 var PORT = process.env.PORT || 3000;
 
