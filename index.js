@@ -1,11 +1,13 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var path = require('path');
+require('dotenv').config();
+
 
 // JSON web token dependencies, including a secret key to sign the token
 var expressJWT = require('express-jwt');
 var jwt = require('jsonwebtoken');
-var secret = process.env.JWT_SECRET;
+var secret = process.env.JWT_SECRET || 'mysupersecret';
 var app = express();
 
 // Mongoose models and connection

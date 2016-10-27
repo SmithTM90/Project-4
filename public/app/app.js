@@ -26,12 +26,18 @@ bandFinder.controller('finder', ['$scope', '$http', '$sce', function($scope,$htt
 
   $scope.search = function(searchTerm) {
     $scope.term = searchTerm
-    tasteKid()
+    tastekid();
+    //spotify();
   }
 
   $scope.convertSongUrl = function(songUrl) {
     return $sce.trustAsResourceUrl(songUrl);
   }
+
+  // function spotify() {
+  //   $http.get('https://api.spotify.com/v1/artists/1yAwtBaoHLEDWAnWR87hBT/related-artists', {
+  //   })
+  // }
 
   function tasteKid() {
     $http.get('https://tastekid.com/api/similar?', {
