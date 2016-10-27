@@ -26,7 +26,7 @@ bandFinder.controller('finder', ['$scope', '$http', '$sce', function($scope,$htt
 
   $scope.search = function(searchTerm) {
     $scope.term = searchTerm
-    tastekid();
+    tasteKid();
     //spotify();
   }
 
